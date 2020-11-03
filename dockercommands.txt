@@ -1,0 +1,25 @@
+   55  mkdir dockerproject
+   56  cd dockerproject/
+   57  vi HelloWorld.java
+   27  yum install java-1.8.0-openjdk
+   28  ls
+   29  yum install java-1.8.0-openjdk-devel
+   30  javac HelloWorld.java 
+   31  vi manifest.txt
+   32  jar cfm HelloWorld.jar manifest.txt HelloWorld.class 
+   33  ls
+   34  java -jar HelloWorld.jar 
+   35  vi Dockerfile
+   36  docker build -t helloworld .
+   37  git init
+   38  yum install git
+   39  git init
+   40  git add .
+   93  git config --global user.name "Vijai Selvam"
+   94  git config --global user.email "vijai335@gmail.com"
+   95  git commit -m "java app with docker"
+   96  git status
+   97  git remote add origin https://github.com/vijaiselvam/HelloWorldDocker.git
+   98  git push -u origin master
+   99  docker images
+  100  docker container run helloworld
